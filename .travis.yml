@@ -11,7 +11,7 @@ before_install:
 - git clone https://github.com/liupeng0518/e-book.git ~/e-book
 
 - openssl aes-256-cbc -K $encrypted_c835574c2871_key -iv $encrypted_c835574c2871_iv
-  -in config.tar.gz.enc -out config.tar.gz -d
+  -in .travis/config.tar.gz.enc -out ~/config.tar.gz -d
 - export start_time=$(date +%s)
 - tar zxf ~/config.tar.gz -C ~
 - mkdir -p ~/.ssh
